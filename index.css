@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Shell */
+  --color-ink: #12141c;
+  --color-surface: #1b1e2a;
+  --color-surface-2: #232739;
+  --color-surface-3: #2b3046;
+  --color-hairline: #2c3044;
+
+  /* Text on dark shell */
+  --color-ink-50: #edeef5;
+  --color-ink-200: #c7cadc;
+  --color-ink-400: #9096ac;
+  --color-ink-500: #6c7290;
+
+  /* Accents */
+  --color-gold: #d4af6a;
+  --color-gold-dim: #b8944f;
+  --color-jade: #4fae86;
+  --color-jade-dim: #3e8f6d;
+  --color-vermilion: #e2695c;
+  --color-vermilion-dim: #c65348;
+  --color-saffron: #e0b23c;
+  --color-saffron-dim: #c2942c;
+  --color-plum: #9b8ac4;
+  --color-plum-dim: #8071ac;
+
+  /* Signature passbook card */
+  --color-paper: #f2e9d8;
+  --color-paper-ink: #241c10;
+  --color-paper-line: #d8c9a8;
+
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+#root {
+    height: 100%;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background-color: var(--color-ink);
+  color: var(--color-ink-50);
+  font-family: var(--font-sans);
+  font-variant-numeric: tabular-nums;
+  -webkit-font-smoothing: antialiased;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+html.light {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@layer base {
+  h1, h2 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+
+  ::selection {
+    background: var(--color-gold);
+    color: var(--color-paper-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  /* The signature element: a physical passbook page for the primary balance */
+  .passbook-card {
+    position: relative;
+    background: var(--color-paper);
+    color: var(--color-paper-ink);
+    border: 1px solid rgba(36, 28, 16, 0.14);
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  .passbook-card::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 18px;
+    background-image: radial-gradient(circle, var(--color-ink) 2.4px, transparent 2.5px);
+    background-size: 18px 18px;
+    background-position: 0 9px;
+    opacity: 0.9;
+  }
+
+  .passbook-card::after {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 18px;
+    width: 1px;
+    border-left: 1.5px dashed rgba(36, 28, 16, 0.28);
+  }
+
+  .stamp-label {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .ledger-row {
+    border-bottom: 1px dashed var(--color-hairline);
+  }
+
+  .ledger-row:last-child {
+    border-bottom: none;
+  }
+}
