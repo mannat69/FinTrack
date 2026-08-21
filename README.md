@@ -296,6 +296,67 @@ LocalStorage
  ↓     ↓         ↓
 Home Analytics Budgets
 ```
+## 📸 Screenshots
+
+### 🏠 Dashboard
+
+The FinTrack dashboard provides a quick overview of your financial health, including balance, income, expenses, savings, and recent transactions.
+
+<p align="center">
+  <img width="1900" height="919" alt="dashboard image" src="https://github.com/user-attachments/assets/6f965ef7-264c-4f2b-ae1d-86718b55634d" />
+</p>
+
+---
+
+### 💳 Transactions
+
+Manage your income and expenses with detailed transaction history, categories, dates, and transaction actions.
+
+<p align="center">
+<img width="1900" height="920" alt="Transactions image" src="https://github.com/user-attachments/assets/2b7dc36d-8acc-4090-8484-bdec3e54c0ba" />
+</p>
+
+---
+
+### 📊 Analytics
+
+Visualize spending patterns, income versus expenses, category breakdowns, and overall financial performance.
+
+<p align="center">
+<img width="1920" height="1080" alt="Analytics image" src="https://github.com/user-attachments/assets/d26eb5af-e636-4cde-89da-6405260d8f29" />
+
+</p>
+
+---
+
+### 💰 Budgets
+
+Create spending limits for different categories and monitor your progress throughout the month.
+
+<p align="center">
+<img width="1920" height="1080" alt="Budgets image" src="https://github.com/user-attachments/assets/6c7f7e66-1b7d-4ae1-9204-d295231d532b" />
+</p>
+
+---
+
+### 🎯 Savings Goals
+
+Set savings targets and track your progress toward important financial goals.
+
+<p align="center">
+<img width="1920" height="1080" alt="Goals image" src="https://github.com/user-attachments/assets/ecb7612e-f75a-4291-96a2-bdebffbb3877" />
+
+</p>
+
+---
+
+### ⚙️ Settings
+
+Customize application preferences, currency, appearance, and manage your financial data.
+
+<p align="center">
+<img width="1920" height="1080" alt="Settings image" src="https://github.com/user-attachments/assets/f6cfb111-526d-4e8e-975f-e4dec734b1b3" />
+</p>
 
 ---
 
